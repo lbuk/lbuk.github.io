@@ -1,0 +1,91 @@
+---
+layout: default
+---
+<html>
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha12345blahblahblahblahblah" crossorigin="anonymous">
+<style>
+  .w {
+    height: 65vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .name {
+    position: absolute;
+    font-family: Helvetica;
+	  text-align: center;
+	  font-weight: bold;
+	  font-size: 20px;
+    color: #000000;
+    margin-top: 1.88vh;
+    background-color: #d3fcfe;
+    padding: 3px;
+  }
+
+  .info {
+    font-family: Helvetica;
+	  text-align: center;
+	  font-weight: 300;
+	  font-size: 16px;
+    line-height: normal;
+    color: #000000;
+    position: absolute;
+    margin-top: 22.6vh;
+    background-color: #d3fcfe;
+    padding: 3px;
+  }
+
+  .h_contacticon {
+    word-spacing: 6px;
+    font-size: 29px;
+  }
+  
+  .site-footer {
+    height: 0%;
+  }
+
+  @media all and (max-height: 430px) and (min-height: 100px) { 
+    .name {
+        margin-top: -4.3vh;
+    }
+    .info {
+        margin-top: 15vh;
+    }
+    .w {
+    height: 55vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    }
+  }
+</style>
+</head>
+<body>
+	<div class="w">
+		<div class="col">
+      <a href="https://www.liamthomasbolton.com/portfolio/FresnelMap/">
+			<img class="homepage" src="{{ site.baseurl }}/img/fresnel_map_portfolio.png" alt="" title=""/>
+      </a>
+		</div>
+		<div class="name">
+      <a href="https://www.liamthomasbolton.com/about/">
+			<b>Liam Thomas Bolton</b>
+      </a>
+		</div>
+		<div class="info">
+      <a href="https://www.liamthomasbolton.com/about/">
+			Design, Data and the Built Environment
+      </a>
+		</div>
+	</div>
+  <div class="h_contacticon center">
+    <a href="mailto:liamthomasbolton@gmail.com"><i class="fas fa-envelope-square"></i></a>
+    <a href="https://www.linkedin.com/in/liam-thomas-bolton" target="_blank"><i class="fab fa-linkedin-square"></i></a>
+    <a href="https://github.com/lbuk" target="_blank"><i class="fab fa-github-square"></i></a>
+  </div>
+</body>
+</html>
