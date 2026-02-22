@@ -1,0 +1,63 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} – Spatial Data Scientist & Researcher{% endif %}</title>
+
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% elsif page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+
+    <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% if page.img %}<meta property="og:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.img %}<meta name="twitter:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.layout == 'post' %}Article{% else %}WebPage{% endif %}",
+      "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+      "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+      "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}",
+        "url": "{{ site.url }}"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" sizes="32x32">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon_fresnel_circles.png">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/favicon_fresnel_circles.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
