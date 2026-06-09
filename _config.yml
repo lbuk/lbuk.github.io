@@ -1,0 +1,20 @@
+title: Liam Thomas Bolton
+author: Liam Thomas Bolton
+email: liamthomasbolton@gmail.com
+github_username: lbuk
+
+description: >
+  Spatial data scientist and researcher specialising in urban analytics, data visualisation and the built environment. PhD in Architectural Space and Computation from UCL.
+baseurl:
+url: https://www.liamthomasbolton.com
+
+markdown: kramdown
+
+highlighter: rouge
+
+paginate_path: "/blog/page:num/"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
